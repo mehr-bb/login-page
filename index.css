@@ -24,10 +24,7 @@ body{
 }
 .grid{
     display: grid;
-    /* grid-template-columns: repeat(10,1fr);
-    grid-template-rows: repeat(10,1fr); */
-
-
+    
     grid-template-columns: repeat(auto-fit, minmax(30,1fr));
     grid-template-columns: repeat(auto-fit, minmax(30,1fr));
     gap: 2px;
@@ -247,5 +244,6 @@ body{
 .login-box{
     z-index: 1;
 }
+
 
 
