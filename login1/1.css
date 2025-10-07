@@ -1,0 +1,246 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins' , sans-serif;
+}
+
+.grid-contain{
+
+    position: relative;
+    width: 100vn;
+    height: 100vh;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    gap: 2px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.login-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    padding: 30px;
+    margin: 0 ; 
+    
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    text-align: center;
+    z-index: 1;
+}
+
+.login-box h2{
+    color: #ffff;
+    margin-bottom:15px;
+    font-family:'Abril Fatface' , serif ;
+    font-weight: 700;
+}
+
+.login-box input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #bbb;
+    color: #ffff;
+    border: none;
+    border-radius: 4px;
+}
+
+.login-box input::placeholder{
+    color: black;
+    opacity: 1;
+}
+.login-box .actions{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+
+}
+
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9em;
+    color: #fff;
+    user-select: none;
+}
+
+.checkbox-container input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.chekmark{
+    height: 18px;
+    width: 18px;
+    background-color: #bbb;
+    border-radius: 4px;
+    margin-right: 8px;
+    position: relative;
+}
+
+.checkbox-container input:checked ~ .chekmark{
+    background-color: #3498db;
+}
+
+
+.chekmark::after{
+    content:"";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .chekmark:after{
+    display: block;
+}
+
+.checkbox-container .chekmark:after{
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45eg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.login-box .actions a{
+    color: #3498db;
+    text-decoration: none;
+}
+
+
+.login-box button{
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    border: none;
+    color: black;
+    font-size: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.login-box button:hover{
+    background-color: #bbb;
+}
+
+
+
+.login-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: slideAnimation 12s infinite;
+}
+
+.slide:nth-child(1) {animation-delay: 0s;}
+.slide:nth-child(2) {animation-delay: 4s;}
+.slide:nth-child(3) {animation-delay: 8s;}
+.slide:nth-child(4) {animation-delay: 12s;}
+
+@keyframes slideAnimation {
+
+0% {opacity: 0;}
+8% {opacity: 1;}
+33% {opacity: 1;}
+41% {opacity: 0;}
+100% {opacity: 0;}
+
+
+}
+
+.login-box{
+    z-index: 1;
+}
+
